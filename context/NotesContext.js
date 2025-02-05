@@ -6,7 +6,6 @@ const NotesContext = createContext();
 export function NotesProvider({ children }) {
   const [notes, setNotes] = useState([]);
   const [selectedNote, setSelectedNote] = useState(null);
-  const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("newest");
   const [notesLoading, setNotesLoading] = useState(true)
 
@@ -35,9 +34,7 @@ export function NotesProvider({ children }) {
         notesLoading,
         notes,
         selectedNote,
-        searchQuery,
         sortBy,
-        setSearchQuery,
         setSortBy,
         setSelectedNote,
         fetchNotes,

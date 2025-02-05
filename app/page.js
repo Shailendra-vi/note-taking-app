@@ -23,8 +23,6 @@ export default function Home() {
   const {
     notesLoading,
     notes,
-    searchQuery,
-    setSearchQuery,
     sortBy,
     setSortBy,
     fetchNotes,
@@ -40,6 +38,7 @@ export default function Home() {
     setTranscript,
   } = useAudioRecorder();
   const [showModal, setShowModal] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const { user, loading } = useAuth();
   const router = useRouter();
